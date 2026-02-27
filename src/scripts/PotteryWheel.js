@@ -1,11 +1,12 @@
-let primaryKey = 1;
+let potteryPieces = 1;
 
 export const makePottery = (shape, weight, height) => {
     const pottery = {
-        type: shape,
-        heft: weight,
-        tall: height,
+        shape: shape,
+        weight: weight,
+        height: height,
+        id: potteryPieces
     }
-    primaryKey++;
+    potteryPieces++;
     return pottery
 }
