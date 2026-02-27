@@ -120,12 +120,13 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   The potteryList() function generated a string of HTML with the relevant pottery data. This string was passed into potteryHTML in main.js. Then assigning
+   document.querySelector(.potteryList) to articleContainer, I used articleContainer.innerHTML = potteryHTML to set everything inside of the .potteryList to the return value of potteryList().
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
    > Paste your video's public URL here
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   This module is only designed to do one thing: make pottery. It's not meant to fire the pottery or list it for sale or render the HTML. This allows for greater readability and logical flow for the whole program.
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   To do this, I would change the toSellOrNotToSell() function by adding another if statement to adjust the price based on the piece.cracked boolean, and move where the array push happens (it would be moved outside the if statement because now pieces are getting pushed to the array regardless of piece.cracked.)
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
    > Paste your video's public URL here
