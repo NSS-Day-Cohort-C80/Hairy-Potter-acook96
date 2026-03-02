@@ -26,10 +26,10 @@ toSellOrNotToSell(firedCup)
 let pottery = usePottery()
 
 // Invoke the component function that renders the HTML list
-const articleContainer = document.querySelector(".potteryList")
 
 const potteryHTML = `
     ${potteryList(pottery)}
 `
+const articleContainer = document.querySelector(".potteryList")
 
 articleContainer.innerHTML = potteryHTML
